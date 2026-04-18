@@ -31,40 +31,9 @@ const INITIAL_NOTICES = [
   },
 ];
 
-const NOTICE_TYPES = ["विज्ञप्ति", "सूचना", "आह्वान", "निर्देशन", "अन्य"];
-
 export default function NoticePage() {
   const [notices, setNotices] = useState(INITIAL_NOTICES);
-  const [showForm, setShowForm] = useState(false);
-  const [form, setForm] = useState({
-    title: "",
-    type: "विज्ञप्ति",
-    date: "",
-    content: "",
-    important: false,
-  });
   const [expandedId, setExpandedId] = useState(null);
-
-  const handleSubmit = () => {
-    if (!form.title.trim() || !form.content.trim()) {
-      alert("कृपया शीर्षक र विवरण भर्नुहोस्।");
-      return;
-    }
-    const newNotice = {
-      id: Date.now(),
-      ...form,
-      date: form.date || "२०८१",
-    };
-    setNotices([newNotice, ...notices]);
-    setForm({
-      title: "",
-      type: "विज्ञप्ति",
-      date: "",
-      content: "",
-      important: false,
-    });
-    setShowForm(false);
-  };
 
   const handleDelete = (id) => {
     if (window.confirm("के तपाईं यो सूचना मेट्न चाहनुहुन्छ?")) {
@@ -79,86 +48,9 @@ export default function NoticePage() {
         <p>
           नेपाली कांग्रेस कुश्मी-गाउँ काठमाडौं सम्पर्क समितिका आधिकारिक सूचनाहरू
         </p>
-        <button
-          className="btn-primary publish-btn"
-          onClick={() => setShowForm(!showForm)}
-        >
-          {showForm
-            ? "✕ फारम बन्द गर्नुहोस्"
-            : "✚ नयाँ विज्ञप्ति प्रकाशित गर्नुहोस्"}
-        </button>
       </div>
 
       <div className="notice-container">
-        {/* Publish form */}
-        {showForm && (
-          <div className="notice-form card">
-            <h2>नयाँ सूचना / विज्ञप्ति प्रकाशित गर्नुहोस्</h2>
-            <div className="form-grid">
-              <div className="form-field">
-                <label>शीर्षक *</label>
-                <input
-                  type="text"
-                  placeholder="विज्ञप्तिको शीर्षक..."
-                  value={form.title}
-                  onChange={(e) => setForm({ ...form, title: e.target.value })}
-                />
-              </div>
-              <div className="form-field">
-                <label>प्रकार</label>
-                <select
-                  value={form.type}
-                  onChange={(e) => setForm({ ...form, type: e.target.value })}
-                >
-                  {NOTICE_TYPES.map((t) => (
-                    <option key={t}>{t}</option>
-                  ))}
-                </select>
-              </div>
-              <div className="form-field">
-                <label>मिति</label>
-                <input
-                  type="text"
-                  placeholder="जस्तै: २०८१ पुस १५"
-                  value={form.date}
-                  onChange={(e) => setForm({ ...form, date: e.target.value })}
-                />
-              </div>
-              <div className="form-field form-checkbox">
-                <label>
-                  <input
-                    type="checkbox"
-                    checked={form.important}
-                    onChange={(e) =>
-                      setForm({ ...form, important: e.target.checked })
-                    }
-                  />
-                  &nbsp; महत्त्वपूर्ण सूचना चिन्ह लगाउनुहोस्
-                </label>
-              </div>
-              <div className="form-field form-field-full">
-                <label>विवरण *</label>
-                <textarea
-                  placeholder="विज्ञप्तिको पूरा विवरण यहाँ लेख्नुहोस्..."
-                  rows={5}
-                  value={form.content}
-                  onChange={(e) =>
-                    setForm({ ...form, content: e.target.value })
-                  }
-                />
-              </div>
-            </div>
-            <div className="form-actions">
-              <button className="btn-primary" onClick={handleSubmit}>
-                📢 प्रकाशित गर्नुहोस्
-              </button>
-              <button className="btn-cancel" onClick={() => setShowForm(false)}>
-                रद्द गर्नुहोस्
-              </button>
-            </div>
-          </div>
-        )}
-
         {/* Notices list */}
         {notices.length === 0 ? (
           <div className="no-notices">
