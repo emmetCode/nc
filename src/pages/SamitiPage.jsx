@@ -2,7 +2,7 @@ import "./SamitiPage.css";
 import ganesh from "../assets/profile.jpg";
 import vivek from "../assets/vivek.jpeg";
 import omkar from "../assets/omkar.jpeg";
-import mahesh from "../assets/mahes.jpeg";
+import mahesh from "../assets/mahendra.jpeg";
 import bardan from "../assets/bardan.jpeg";
 
 const SAMITI_MEMBERS = [
@@ -25,7 +25,7 @@ const SAMITI_MEMBERS = [
   {
     name: "ओमकार आचार्य",
     role: "सदस्य",
-    phone: "९८६६०५७०२४",
+    phone: "९८६७७४१४४०",
     image: omkar,
     initial: "ओ",
     highlight: false,
