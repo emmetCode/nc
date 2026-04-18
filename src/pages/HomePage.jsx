@@ -3,7 +3,7 @@ import SambodhanSection from "../components/SambodhanSection";
 import "./HomePage.css";
 
 const QUICK_STATS = [
-  { icon: "🏛️", label: "स्थापना", value: "२०८१" },
+  { icon: "🏛️", label: "स्थापना", value: "२०८३" },
   { icon: "👥", label: "सदस्य", value: "५+" },
   { icon: "📢", label: "विज्ञप्ति", value: "सक्रिय" },
   { icon: "🗺️", label: "क्षेत्र", value: "काठमाडौं" },
