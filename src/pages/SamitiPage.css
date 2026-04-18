@@ -1,0 +1,206 @@
+.samiti-page-header {
+  background: linear-gradient(135deg, var(--nc-blue), #001f50);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.samiti-page-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  /* background: linear-gradient(90deg, var(--nc-red), var(--nc-gold)); */
+}
+
+.samiti-page-header h1 {
+  font-family: "Yatra One", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.samiti-page-header p {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1rem;
+}
+
+.samiti-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.member-group {
+  margin-bottom: 4rem;
+}
+
+.founders-grid {
+  justify-content: center !important;
+}
+
+.members-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem;
+}
+
+/* Member Card */
+.member-card {
+  position: relative;
+  text-align: center;
+  padding: 2rem 1.5rem 1.5rem;
+  border-top: 4px solid var(--nc-blue);
+}
+
+.member-founder {
+  border-top-color: var(--nc-gold) !important;
+  box-shadow: 0 6px 30px rgba(212, 160, 23, 0.15) !important;
+}
+
+.founder-ribbon {
+  position: absolute;
+  top: 12px;
+  right: -5px;
+  background: var(--nc-gold);
+  color: var(--nc-dark);
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.2rem 0.8rem;
+  border-radius: 3px 0 0 3px;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.founder-ribbon::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: -5px;
+  border-top: 5px solid #a0780f;
+  border-right: 5px solid transparent;
+}
+
+.member-img-wrap {
+  width: 140px;
+  height: 160px;
+  margin: 0 auto 1.2rem;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 3px solid var(--nc-blue);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+}
+
+.member-founder .member-img-wrap {
+  border-color: var(--nc-gold);
+}
+
+.member-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.member-img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(160deg, #e8f0fb, #c8d8f5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  border: 2px dashed rgba(0, 53, 128, 0.3);
+  border-radius: 7px;
+}
+
+.member-initial {
+  font-family: "Yatra One", cursive;
+  font-size: 3.5rem;
+  color: var(--nc-blue);
+  opacity: 0.5;
+}
+
+.placeholder-label {
+  font-size: 0.7rem;
+  color: #888;
+}
+
+.member-info h3 {
+  font-family: "Yatra One", cursive;
+  font-size: 1.2rem;
+  color: var(--nc-blue);
+  margin-bottom: 0.5rem;
+}
+
+.member-role-badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  padding: 0.25rem 0.8rem;
+  border-radius: 100px;
+  margin-bottom: 0.8rem;
+}
+
+.badge-founder {
+  background: rgba(212, 160, 23, 0.15);
+  color: #8a6000;
+  border: 1px solid rgba(212, 160, 23, 0.4);
+}
+
+.badge-member {
+  background: var(--nc-light-blue);
+  color: var(--nc-blue);
+  border: 1px solid rgba(0, 53, 128, 0.2);
+}
+
+.member-phone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.member-phone a {
+  color: var(--nc-text);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.member-phone a:hover {
+  color: var(--nc-red);
+}
+
+/* Picture note */
+.picture-note {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(0, 53, 128, 0.05);
+  border: 1px dashed var(--nc-blue);
+  border-radius: 10px;
+  padding: 1.2rem 1.5rem;
+  margin-top: 2rem;
+}
+
+.picture-note span {
+  font-size: 1.5rem;
+}
+.picture-note p {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .members-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+  .member-img-wrap {
+    width: 100px;
+    height: 115px;
+  }
+}

@@ -1,0 +1,50 @@
+.footer {
+  background: linear-gradient(135deg, var(--nc-blue) 0%, #001f4d 100%);
+  color: white;
+  margin-top: 4rem;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  padding: 3rem 3rem 2rem;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.footer-col h3 {
+  font-family: 'Yatra One', cursive;
+  color: var(--nc-gold);
+  margin-bottom: 0.8rem;
+  font-size: 1.1rem;
+}
+
+.footer-col p {
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+
+.footer-motto {
+  font-style: italic;
+  color: rgba(255,255,255,0.6) !important;
+  font-size: 0.85rem !important;
+  margin-top: 0.5rem;
+}
+
+.footer-col a {
+  color: var(--nc-gold);
+  text-decoration: none;
+}
+
+.footer-col a:hover {
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.2rem;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  background: rgba(0,0,0,0.2);
+}

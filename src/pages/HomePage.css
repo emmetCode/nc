@@ -1,0 +1,75 @@
+.stats-bar {
+  background: white;
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  border-bottom: 3px solid var(--nc-red);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 3rem;
+  border-right: 1px solid #eee;
+  gap: 0.1rem;
+  transition: background 0.2s;
+}
+
+.stat-item:last-child { border-right: none; }
+.stat-item:hover { background: var(--nc-light-blue); }
+
+.stat-icon { font-size: 1.5rem; }
+
+.stat-value {
+  font-family: 'Yatra One', cursive;
+  font-size: 1.4rem;
+  color: var(--nc-blue);
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+/* About section */
+.about-section {
+  padding: 5rem 2rem;
+  background: var(--nc-gray);
+}
+
+.about-container {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.about-card {
+  padding: 2rem 1.8rem;
+  text-align: center;
+}
+
+.about-card-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-card h3 {
+  font-family: 'Yatra One', cursive;
+  color: var(--nc-blue);
+  margin-bottom: 0.8rem;
+  font-size: 1.2rem;
+}
+
+.about-card p {
+  color: #555;
+  line-height: 1.8;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,125 @@
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Top strip */
+.navbar-top-strip {
+  background: linear-gradient(90deg, var(--nc-red), var(--nc-blue));
+  color: #fff;
+  text-align: center;
+  padding: 4px 1rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+/* Main navbar */
+.navbar-main {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 2rem;
+  gap: 1rem;
+  /* border-bottom: 3px solid var(--nc-red); */
+}
+
+/* Brand */
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+
+.nc-flag-container {
+  display: flex;
+  align-items: center;
+}
+
+.nc-flag {
+  height: 55px;
+  width: auto;
+  filter: drop-shadow(1px 2px 4px rgba(0, 0, 0, 0.2));
+}
+
+/* Title */
+.navbar-title-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.navbar-title-main {
+  font-family: "Yatra One", cursive;
+  font-size: 1.4rem;
+  color: var(--nc-blue);
+  line-height: 1.2;
+}
+
+.navbar-title-sub {
+  font-size: 0.8rem;
+  color: var(--nc-red);
+  font-weight: 600;
+}
+
+/* Navigation */
+.navbar-nav {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+/* Links */
+.nav-link {
+  text-decoration: none;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  font-family: "Tiro Devanagari Nepali", serif;
+  font-size: 0.9rem;
+  color: var(--nc-dark);
+  font-weight: 600;
+  border: 1.5px solid transparent;
+  transition: all 0.25s ease;
+}
+
+.nav-link:hover {
+  background: var(--nc-light-blue);
+  color: var(--nc-blue);
+  border-color: var(--nc-blue);
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  background: var(--nc-blue);
+  color: #fff;
+  border-color: var(--nc-blue);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar-main {
+    flex-direction: column;
+    padding: 0.8rem 1rem;
+  }
+
+  .navbar-title-main {
+    font-size: 1.2rem;
+  }
+
+  .navbar-nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-link {
+    font-size: 0.8rem;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .nc-flag {
+    height: 45px;
+  }
+}

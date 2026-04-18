@@ -1,0 +1,273 @@
+.notice-page-header {
+  background: linear-gradient(135deg, var(--nc-red), #800000);
+  color: white;
+  text-align: center;
+  padding: 4rem 2rem 3rem;
+  position: relative;
+}
+
+.notice-page-header::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  /* background: linear-gradient(90deg, var(--nc-blue), var(--nc-gold)); */
+}
+
+.notice-page-header h1 {
+  font-family: "Yatra One", cursive;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.notice-page-header p {
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 1.5rem;
+}
+
+.publish-btn {
+  background: white !important;
+  color: var(--nc-red) !important;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2) !important;
+}
+
+.publish-btn:hover {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.notice-container {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+/* Form */
+.notice-form {
+  padding: 2rem;
+  margin-bottom: 2.5rem;
+  border-top: 4px solid var(--nc-red);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notice-form h2 {
+  font-family: "Yatra One", cursive;
+  color: var(--nc-blue);
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.2rem;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-field-full {
+  grid-column: 1 / -1;
+}
+
+.form-checkbox {
+  justify-content: flex-end;
+  padding-bottom: 0.2rem;
+}
+
+.form-checkbox label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.form-field label {
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #444;
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  font-family: "Tiro Devanagari Nepali", serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+  resize: vertical;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  border-color: var(--nc-blue);
+}
+
+.form-actions {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.btn-cancel {
+  background: none;
+  border: 2px solid #ccc;
+  padding: 0.7rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Tiro Devanagari Nepali", serif;
+  font-size: 0.95rem;
+  color: #666;
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+  border-color: var(--nc-red);
+  color: var(--nc-red);
+}
+
+/* Notices list */
+.notices-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.notice-card {
+  padding: 1.5rem;
+  border-left: 5px solid var(--nc-blue);
+  position: relative;
+}
+
+.notice-important {
+  border-left-color: var(--nc-red) !important;
+  background: linear-gradient(
+    to right,
+    rgba(204, 0, 0, 0.03),
+    white
+  ) !important;
+}
+
+.notice-card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.8rem;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.notice-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.notice-type-badge {
+  font-size: 0.75rem;
+  padding: 0.2rem 0.7rem;
+  border-radius: 100px;
+  font-weight: bold;
+  background: var(--nc-light-blue);
+  color: var(--nc-blue);
+}
+
+.important-badge {
+  font-size: 0.75rem;
+  background: rgba(204, 0, 0, 0.1);
+  color: var(--nc-red);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+
+.notice-date {
+  font-size: 0.8rem;
+  color: #888;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  opacity: 0.4;
+  transition: opacity 0.2s;
+  padding: 0.2rem;
+  flex-shrink: 0;
+}
+
+.delete-btn:hover {
+  opacity: 1;
+}
+
+.notice-title {
+  font-family: "Yatra One", cursive;
+  font-size: 1.15rem;
+  color: var(--nc-dark);
+  margin-bottom: 0.6rem;
+}
+
+.notice-content {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.notice-content.expanded {
+  -webkit-line-clamp: unset;
+  display: block;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: var(--nc-blue);
+  cursor: pointer;
+  font-family: "Tiro Devanagari Nepali", serif;
+  font-size: 0.85rem;
+  padding: 0.3rem 0;
+  margin-top: 0.3rem;
+}
+
+.no-notices {
+  text-align: center;
+  padding: 4rem;
+  color: #aaa;
+}
+
+.no-notices span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+}
